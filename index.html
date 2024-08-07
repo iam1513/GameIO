@@ -1,0 +1,182 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Games IO</title>
+    <style>
+      * {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+        font-family: "Montserrat", sans-serif;
+      }
+      body,
+      html {
+        height: 100%;
+        overflow: hidden;
+      }
+      body {
+        background-color: #1e1e2f;
+        color: #fff;
+        display: flex;
+        flex-direction: column;
+      }
+      header {
+        background-color: #2d2b52;
+        padding: 0.5rem 2rem;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        box-shadow: 0 2px 10px rgba(0, 0, 0, 0.2);
+      }
+      .logo {
+        font-size: 1.5rem;
+        font-weight: 800;
+        color: #a855f7;
+        text-transform: uppercase;
+        letter-spacing: 2px;
+        text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.3);
+      }
+      nav a {
+        color: #fff;
+        text-decoration: none;
+        margin-left: 1rem;
+        font-weight: 600;
+        transition: color 0.3s;
+        font-size: 0.9rem;
+      }
+      nav a:hover {
+        color: #a855f7;
+      }
+      main {
+        flex-grow: 1;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        padding: 1rem;
+        background: linear-gradient(135deg, #2d2b52 0%, #1e1e2f 100%);
+        overflow: auto;
+      }
+      .game-grid {
+        display: grid;
+        grid-template-columns: repeat(3, 1fr);
+        gap: 1rem;
+        max-width: 1000px;
+        width: 100%;
+      }
+      .game-card,
+      .contributors-card {
+        background-color: #3c3b6e;
+        border-radius: 10px;
+        overflow: hidden;
+        transition: transform 0.3s, box-shadow 0.3s;
+        box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
+        aspect-ratio: 1 / 1;
+        display: flex;
+        flex-direction: column;
+      }
+      .game-card:hover,
+      .contributors-card:hover {
+        transform: translateY(-5px);
+        box-shadow: 0 10px 20px rgba(168, 85, 247, 0.3);
+      }
+      .game-card img {
+        width: 100%;
+        height: 70%;
+        object-fit: cover;
+        border-bottom: 2px solid #a855f7;
+      }
+      .game-card h3,
+      .contributors-card h3 {
+        padding: 0.8rem;
+        font-size: 1rem;
+        text-align: center;
+        background-color: #2d2b52;
+        color: #fff;
+        font-weight: 600;
+        flex-grow: 1;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+      }
+      .contributors-list {
+        height: 70%;
+        overflow-y: auto;
+        padding: 1rem;
+        display: flex;
+        flex-direction: column;
+        justify-content: flex-start;
+      }
+      .contributors-list p {
+        margin-bottom: 0.5rem;
+        font-size: 0.9rem;
+      }
+      footer {
+        background-color: #2d2b52;
+        text-align: center;
+        padding: 0.5rem;
+        font-size: 0.8rem;
+        color: #a0aec0;
+      }
+    </style>
+    <link
+      href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600;800&display=swap"
+      rel="stylesheet"
+    />
+  </head>
+  <body>
+    <header>
+      <div class="logo">Games.IO</div>
+    </header>
+
+    <main>
+        <div class="game-grid">
+            <a href="Tic Tac Toe/index.html" class="game-link">
+                <div class="game-card">
+                    <img src="images/TicTacToe.png" alt="Tic Tac Toe">
+                    <h3>Tic Tac Toe</h3>
+                </div>
+            </a>
+            <a href="Memory Game/index.html" class="game-link">
+                <div class="game-card">
+                    <img src="images/MemoryGame (2).png" alt="Space Explorers">
+                    <h3>Memory Game</h3>
+                </div>
+            </a>
+            <a href="Ping Pong/index.html" class="game-link">
+                <div class="game-card">
+                    <img src="images/PingPong.png" alt="Racing Legends">
+                    <h3>Ping Pong</h3>
+                </div>
+            </a>
+            <a href="Snake Game/index.html" class="game-link">
+                <div class="game-card">
+                    <img src="images/SnakeGame.png" alt="Puzzle Master">
+                    <h3>Snake Master</h3>
+                </div>
+            </a>
+            <div class="game-card">
+                <img src="images/comingSoon.jpg" alt="Strategy Wars">
+                <h3>More Games Coming Soon</h3>
+            </div>
+            <div class="contributors-card">
+                <div class="contributors-list">
+                    <p>Rishabh Mittal - 22BCE10057</p>
+                    <p>Om Shelke - 22BCE10150</p>
+                    <p>Ashish Kumar - 22BCE10180</p>
+                    <p>Rishabh Gupta - 22BCE10213</p>
+                    <p>Aditya Kushwaha - 22BCE10403</p>
+                    <p>Devesh Singh - 22BCE10581</p>
+                    <p>Aryan Pachore - 22BCE10775</p>
+                </div>
+                <h3>Contributors</h3>
+            </div>
+        </div>
+    </main>
+
+    <footer>
+      <p>&copy; 2024 Games IO. All rights reserved.</p>
+    </footer>
+  </body>
+</html>

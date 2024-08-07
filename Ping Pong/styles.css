@@ -1,0 +1,113 @@
+html {
+  box-sizing: border-box;
+}
+
+*,
+*::before,
+*::after {
+  box-sizing: inherit;
+}
+
+body {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  height: 100vh;
+  margin: 0;
+  font-family: 'Arial', sans-serif;
+  background: linear-gradient(135deg, #73a5ff, #5477f5);
+  color: #fff;
+  text-align: center;
+}
+
+h1 {
+  font-size: 36px;
+  margin-bottom: 20px;
+  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+  animation: fadeIn 1s ease-in-out;
+}
+
+#score-container {
+  font-size: 24px;
+  margin-bottom: 10px;
+  display: flex;
+  align-items: center;
+  text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.5);
+  animation: fadeIn 1.5s ease-in-out;
+}
+
+#score-label {
+  margin-right: 10px;
+}
+
+#table {
+  border: 2px solid #fff;
+  width: 700px;
+  height: 400px;
+  position: relative;
+  background-color: #000;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
+  margin-bottom: 20px;
+  animation: fadeIn 2s ease-in-out;
+}
+
+#paddle {
+  background-color: #f39c12;
+  width: 10px;
+  height: 75px;
+  position: absolute;
+  border-radius: 5px;
+  box-shadow: 0 0 5px rgba(0, 0, 0, 0.5);
+}
+
+#ball {
+  height: 20px;
+  width: 20px;
+  background-color: #3498db;
+  border-radius: 50%;
+  position: absolute;
+  box-shadow: 0 0 5px rgba(0, 0, 0, 0.5);
+}
+
+#game-over {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  font-size: 32px;
+  color: red;
+  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+  animation: fadeIn 2.5s ease-in-out;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+#restart-button {
+  font-size: 18px;
+  padding: 10px 20px;
+  margin-top: 10px;
+  cursor: pointer;
+  background-color: #fff;
+  color: #000;
+  border: none;
+  border-radius: 5px;
+  box-shadow: 0 0 5px rgba(0, 0, 0, 0.5);
+  transition: background-color 0.3s, color 0.3s;
+  animation: fadeIn 3s ease-in-out;
+}
+
+#restart-button:hover {
+  background-color: #3498db;
+  color: #fff;
+}
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
